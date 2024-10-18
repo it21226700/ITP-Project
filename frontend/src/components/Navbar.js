@@ -4,10 +4,18 @@ const Navbar = () => {
 
   return (
     <header>
+      
       <div className="container">
+      
         <Link to="/">
           <h1>Serendip</h1>
-        </Link>
+          </Link>
+          
+          <div className="search" >
+            <input className="search" placeholder="Search Employees" name= "searchemp"></input>
+          </div>
+          
+        
       </div>
     </header>
   )

@@ -17,6 +17,25 @@ export const employeesReducer = (state, action) => {
         return { 
             employees: state.employees.filter(e => e._id !== action.payload._id) 
         }
+      //
+      case 'UPDATE_EMPLOYEE':
+        return {
+            employees: state.employees.filter(e => {
+                if (e._id === action.payload._id) {
+                    return action.payload
+                } else {
+                    return e
+                }
+            })
+      }
+
+      case 'SET_SELECTED_EMPLOYEE':
+        return {
+            ...state,
+            selectedEmployee: action.payload
+      }
+
+      //
       default:
         return state
     }
@@ -25,7 +44,8 @@ export const employeesReducer = (state, action) => {
 
 export const EmployeesContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(employeesReducer, { 
-      employees: null
+      employees: null ,
+      selectedEmployee: null 
     })
     
     return (

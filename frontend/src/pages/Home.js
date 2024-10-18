@@ -6,7 +6,7 @@ import EmployeeForm from '../components/EmployeeForm'
 
 
 const Home = () => {
-  const {employees,dispatch} =useEmployeesContext()
+  const {employees,/*selectedEmployee ,*/ dispatch} =useEmployeesContext()
   
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -29,6 +29,7 @@ const Home = () => {
           ))}
         </div>
         <EmployeeForm/>
+
       </div>
     )
 }

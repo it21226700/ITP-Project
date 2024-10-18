@@ -3,7 +3,8 @@
 
 /* layout */
 :root {
-  --primary: #1aac83;
+  --primary: #f5510a;
+  --second: #ff1e00;
   --error: #e7195a;
 }
 body {
@@ -12,7 +13,7 @@ body {
   font-family: "Poppins";
 }
 header {
-  background: #fff;
+  background: #211f1f;
 }
 header .container {
   max-width: 1400px;
@@ -23,8 +24,17 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #333;
+  color: #fed400;
   text-decoration: none;
+}
+
+header .search {
+  max-width: 400px;
+}
+header h4 {
+  margin-top: 0px;
+  margin-left: 1200px;
+  color: #fed400;
 }
 .pages{
   max-width: 1400px;
@@ -61,16 +71,27 @@ header a {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
+  background: #1f1d1d;
   padding: 6px;
-  border-radius: 50%;
-  color: #333;
+  border-radius: 10%;
+  color: #fbfbfb;
+}
+.employee-details button {
+  background:#fed400;
+  border: 0;
+  color: #000000;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 /* new workout form */
 label, input {
   display: block;
 }
+
+
 input {
   padding: 10px;
   margin-top: 10px;
@@ -81,7 +102,7 @@ input {
   box-sizing: border-box;
 }
 form button {
-  background: var(--primary);
+  background: var(--second);
   border: 0;
   color: #fff;
   padding: 10px;

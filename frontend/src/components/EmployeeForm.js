@@ -74,17 +74,39 @@ const EmployeeForm = () => {
           value={gender}
         />
 
+
         <label>Salary:</label>
         <input 
           type="number" 
           onChange={(e) => setSalary(e.target.value)} 
           value={salary} 
         />
+
+
+
+        <label for="myfile">Image:</label>
+        <label><input type="file" id="myfile" name="myfile"/><br></br></label>
+        <label><input type="submit" value="Submit"/></label> 
   
-        <button>Add Employee</button>
+        <button >Add Employee</button>
         {error && <div className="error">{error}</div>}
       </form>
     )
 }
+
+/*
+<label for="myfile">Image:</label>
+<input type="file" id="myfile" name="myfile"/><br></br>
+<input type="submit" value="Submit"/> 
+
+
+
+
+
+                <select name="gender" id="gender">
+          <option value={gender}>Male</option>
+          <option value={gender}>Female</option>
+        </select>
+*/
 
 export default EmployeeForm
